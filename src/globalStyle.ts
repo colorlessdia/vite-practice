@@ -9,10 +9,16 @@ const globalStyle = css({
   'ul li': {
     listStyle: 'none',
   },
-  a: {
+  'a': {
     color: 'inherit',
     textDecoration: 'none',
   },
+  'button': {
+    fontSize: '16px',
+    border: 0,
+    background: '#fff',
+    cursor: 'pointer',
+  }
 });
 
 export default globalStyle;

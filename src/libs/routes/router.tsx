@@ -6,11 +6,13 @@ import LoginPage from '../../pages/LoginPage/LoginPage';
 import MyPage from '../../pages/MyPage/MyPage';
 import ProtectedRouter from './ProtectedRouter';
 import NoLoginRouter from './NoLoginRouter';
+import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 
 const router = createHashRouter([
   {
     path: '/',
     element: <RootPage />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         index: true,
