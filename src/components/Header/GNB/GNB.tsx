@@ -1,6 +1,12 @@
 import { useRecoilValue } from 'recoil';
 import { isLoggedInSelector } from '../../../libs/recoil/loginState';
 import GNBItem from './GNBItem/GNBItem';
+import { css } from '@emotion/react';
+
+const gnbLinkListStyle = css({
+  display: 'flex',
+  gap: '20px',
+});
 
 const GNB = () => {
   const isLoggedIn = useRecoilValue(isLoggedInSelector);
@@ -8,12 +14,11 @@ const GNB = () => {
   const publicLinkList = [{ href: '/', name: '메인' }];
   const protectedLinkList = [
     { href: '/mypage', name: '마이페이지', protected: true },
-    { href: '/login', name: '로그인', protected: false },
   ];
 
   return (
     <nav>
-      <ul>
+      <ul css={gnbLinkListStyle}>
         {publicLinkList.map((link) => (
           <GNBItem key={link.href} link={link} />
         ))}
