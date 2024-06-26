@@ -7,6 +7,10 @@ import MyPage from '../../pages/MyPage/MyPage';
 import ProtectedRouter from './ProtectedRouter';
 import NoLoginRouter from './NoLoginRouter';
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
+import BlogPage from '../../pages/BlogPage/BlogPage';
+import CreateBlogPage from '../../pages/CreateBlogPage/CreateBlogPage';
+import BlogDetailPage from '../../pages/BlogDetailPage/BlogDetailPage';
+import BlogListPage from '../../pages/BlogListPage/BlogListPage';
 
 const router = createHashRouter([
   {
@@ -35,6 +39,24 @@ const router = createHashRouter([
           {
             path: 'mypage',
             element: <MyPage />,
+          },
+          {
+            path: 'blog',
+            element: <BlogPage />,
+            children: [
+              {
+                index: true,
+                element: <BlogListPage />
+              },
+              {
+                path: ':blogId',
+                element: <BlogDetailPage />
+              }
+            ],
+          },
+          {
+            path: 'create-blog',
+            element: <CreateBlogPage />
           },
         ],
       },

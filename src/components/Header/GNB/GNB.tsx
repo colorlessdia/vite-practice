@@ -13,6 +13,7 @@ const GNB = () => {
   /** GNB 링크 모음 */
   const publicLinkList = [{ href: '/', name: '메인' }];
   const protectedLinkList = [
+    { href: '/blog', name: '블로그', protected: true },
     { href: '/mypage', name: '마이페이지', protected: true },
   ];
 
