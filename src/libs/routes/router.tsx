@@ -1,11 +1,11 @@
-import { createHashRouter } from "react-router-dom";
+import { createHashRouter } from 'react-router-dom';
 // pages
-import RootPage from "../../pages/RootPage/RootPage";
-import MainPage from "../../pages/MainPage/MainPage";
-import LoginPage from "../../pages/LoginPage/LoginPage";
-import MyPage from "../../pages/MyPage/MyPage";
-import ProtectedRouter from "./ProtectedRouter";
-import NoLoginRouter from "./NoLoginRouter";
+import RootPage from '../../pages/RootPage/RootPage';
+import MainPage from '../../pages/MainPage/MainPage';
+import LoginPage from '../../pages/LoginPage/LoginPage';
+import MyPage from '../../pages/MyPage/MyPage';
+import ProtectedRouter from './ProtectedRouter';
+import NoLoginRouter from './NoLoginRouter';
 
 const router = createHashRouter([
   {
@@ -14,7 +14,7 @@ const router = createHashRouter([
     children: [
       {
         index: true,
-        element: <MainPage />
+        element: <MainPage />,
       },
       {
         // 비로그인 유저 전용
@@ -22,9 +22,9 @@ const router = createHashRouter([
         children: [
           {
             path: 'login',
-            element: <LoginPage />
+            element: <LoginPage />,
           },
-        ]
+        ],
       },
       {
         // 로그인 유저 전용
@@ -32,12 +32,12 @@ const router = createHashRouter([
         children: [
           {
             path: 'mypage',
-            element: <MyPage />
+            element: <MyPage />,
           },
         ],
-      }
-    ]
-  }
+      },
+    ],
+  },
 ]);
 
 export default router;

@@ -1,3 +1,1 @@
-export type sessionId = 
-  | string
-  | undefined;
+export type sessionId = string | undefined;

@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom";
-import { useSetRecoilState } from "recoil";
-import { sessionIdState } from "../libs/recoil/loginState";
+import { useNavigate } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
+import { sessionIdState } from '../libs/recoil/loginState';
 
 type UseLoginRequestProps = {
   userId: string;
@@ -20,16 +20,20 @@ const useLoginRequest = ({ userId, userPwd }: UseLoginRequestProps) => {
       const response = await new Promise<string>((res) => {
         if (userId === tempId && userPwd === tempPwd) {
           // 서버 유저정보 일치 상황 가정
-          res(JSON.stringify({
-            message: 'success',
-            sessionId: 'abcdefgh'
-          }));
+          res(
+            JSON.stringify({
+              message: 'success',
+              sessionId: 'abcdefgh',
+            }),
+          );
         } else {
           // 서버 유저정보 불일치 상황 가정
-          res(JSON.stringify({
-            message: 'failed',
-            sessionId: undefined
-          }));
+          res(
+            JSON.stringify({
+              message: 'failed',
+              sessionId: undefined,
+            }),
+          );
         }
       });
 
@@ -48,7 +52,7 @@ const useLoginRequest = ({ userId, userPwd }: UseLoginRequestProps) => {
   };
 
   return {
-    handleClickLogin
+    handleClickLogin,
   };
 };
 

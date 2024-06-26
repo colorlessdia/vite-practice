@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 const globalStyle = css({
   '*, *::before, *::after': {
@@ -9,10 +9,10 @@ const globalStyle = css({
   'ul li': {
     listStyle: 'none',
   },
-  'a': {
+  a: {
     color: 'inherit',
     textDecoration: 'none',
-  }
+  },
 });
 
 export default globalStyle;

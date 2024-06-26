@@ -1,8 +1,8 @@
-import Logo from "./Logo/Logo";
+import Logo from './Logo/Logo';
 import GNB from './GNB/GNB';
 import LogoutButton from './LogoutButton/LogoutButton';
-import { useRecoilValue } from "recoil";
-import { isLoggedInSelector } from "../../libs/recoil/loginState";
+import { useRecoilValue } from 'recoil';
+import { isLoggedInSelector } from '../../libs/recoil/loginState';
 
 const Header = () => {
   const isLoggedIn = useRecoilValue(isLoggedInSelector);
@@ -11,9 +11,7 @@ const Header = () => {
     <header>
       <Logo />
       <GNB />
-      {
-        isLoggedIn && <LogoutButton />
-      }
+      {isLoggedIn && <LogoutButton />}
     </header>
   );
 };

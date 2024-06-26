@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import type { GnbItem } from "../../../../types/gnbType";
+import { Link } from 'react-router-dom';
+import type { GnbItem } from '../../../../types/gnbType';
 
 // props
 type GNBItemProps = {
@@ -9,9 +9,7 @@ type GNBItemProps = {
 const GNBItem = ({ link }: GNBItemProps) => {
   return (
     <li key={link.href}>
-      <Link to={link.href}>
-        {link.name}
-      </Link>
+      <Link to={link.href}>{link.name}</Link>
     </li>
   );
 };

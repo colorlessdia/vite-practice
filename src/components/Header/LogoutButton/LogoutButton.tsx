@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom";
-import { useSetRecoilState } from "recoil";
-import { sessionIdState } from "../../../libs/recoil/loginState";
+import { useNavigate } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
+import { sessionIdState } from '../../../libs/recoil/loginState';
 
 const LogoutButton = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const LogoutButton = () => {
   };
 
   return (
-    <button type="button" onClick={handleClickLogout}>
+    <button type='button' onClick={handleClickLogout}>
       로그아웃
     </button>
   );

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const useLoginInput = () => {
   const [userId, setUserId] = useState<string>('');
@@ -18,7 +18,7 @@ const useLoginInput = () => {
     userId,
     userPwd,
     handleChangeUserId,
-    handleChangeUserPwd
+    handleChangeUserPwd,
   };
 };
 

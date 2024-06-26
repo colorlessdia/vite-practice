@@ -1,5 +1,5 @@
-import { atom, selector } from "recoil";
-import type { sessionId } from "../../types/loginType";
+import { atom, selector } from 'recoil';
+import type { sessionId } from '../../types/loginType';
 
 /** 세션 아이디 상태 */
 export const sessionIdState = atom<sessionId>({
