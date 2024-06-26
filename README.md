@@ -21,6 +21,14 @@ recoil
 @emotion/react
 
 
+### 디렉토리 구조
+components: 컴포넌트 모음
+pages: router 페이지 모음
+hooks: 커스텀 훅 모음
+libs: 라이브러리 모음
+types: 타입 파일 모음
+
+
 ### Router 연습 내용
 github pages 배포를 위해 hashrouter 사용
 
